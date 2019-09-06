@@ -1,0 +1,13 @@
+﻿server:
+  port: 3344
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/bjmaycr/microservicecloud-config
+          username: bjmycr
+          password: zhaodehang66.
