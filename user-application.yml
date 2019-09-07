@@ -1,0 +1,57 @@
+  server:
+    port: 8088
+  spring:
+    profiles: dev
+    application:
+      name: user-server
+    datasource:    #数据源
+      url: jdbc:mysql://localhost:3306/1701xx4?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root
+  mybatis:
+    type-aliases-package: com.cloud.bean
+    configuration:
+      map-underscore-to-camel-case: true  #字段实体属性映射驼峰转换
+    mapper-locations: classpath:mapper/*.xml
+  logging:
+    level:
+      com.cloud.mapper: debug  #sql日志打印
+  eureka:
+    client:
+      service-url: # EurekaServer地址
+        defaultZone: http://127.0.0.1:10086/eureka
+    instance:
+      prefer-ip-address: true # 当调用getHostname获取实例的hostname时，返回ip而不是host名称
+      ip-address: 127.0.0.1  # 指定自己的ip信息，不指定的话会自己寻找
+  info:
+    app.name: user-server
+    app.desc: 这是一个用户服务
+    
+  server:
+    port: 8089
+  spring:
+    profiles: test
+    application:
+      name: user-server
+    datasource:    #数据源
+      url: jdbc:mysql://localhost:3306/1701xx4?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root
+  mybatis:
+    type-aliases-package: com.cloud.bean
+    configuration:
+      map-underscore-to-camel-case: true  #字段实体属性映射驼峰转换
+    mapper-locations: classpath:mapper/*.xml
+  logging:
+    level:
+      com.cloud.mapper: debug  #sql日志打印
+  eureka:
+    client:
+      service-url: # EurekaServer地址
+        defaultZone: http://127.0.0.1:10086/eureka
+    instance:
+      prefer-ip-address: true # 当调用getHostname获取实例的hostname时，返回ip而不是host名称
+      ip-address: 127.0.0.1  # 指定自己的ip信息，不指定的话会自己寻找
+  info:
+    app.name: user-server
+    app.desc: 这是一个用户服务
