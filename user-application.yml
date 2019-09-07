@@ -4,7 +4,7 @@
     profiles: dev
     application:
       name: user-server
-    datasource:    #数据源
+  datasource:    #数据源
       url: jdbc:mysql://localhost:3306/1701xx4?useUnicode=true&characterEncoding=utf-8
       username: root
       password: root
@@ -26,14 +26,14 @@
   info:
     app.name: user-server
     app.desc: 这是一个用户服务
-    
+---
   server:
     port: 8089
   spring:
     profiles: test
     application:
       name: user-server
-    datasource:    #数据源
+  datasource:    #数据源
       url: jdbc:mysql://localhost:3306/1701xx4?useUnicode=true&characterEncoding=utf-8
       username: root
       password: root
