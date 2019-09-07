@@ -1,7 +1,7 @@
 server:
   port: 8070
 spring:
-  profiles:dev
+  profiles: dev
   application:
     name: user-consumer
 eureka:
