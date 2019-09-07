@@ -1,7 +1,7 @@
 server:
   port: 10086 # 端口
 spring:
-  profiles:dev
+  profiles: dev
   application:
     name: eureka-server # 应用名称，会在Eureka中显示
 eureka:
